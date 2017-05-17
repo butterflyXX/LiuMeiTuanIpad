@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LXCBaseTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+//    self.window
+    
+    LXCBaseTabBarController *rootVc = [LXCBaseTabBarController new];
+    
+//    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:rootVc];
+    
+    self.window.rootViewController = rootVc;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
