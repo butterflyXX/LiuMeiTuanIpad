@@ -12,6 +12,8 @@
 
 @interface LXCCategoryViewController ()<UITableViewDelegate,UITableViewDataSource>
 
+@property(nonatomic,assign)NSInteger selectedRow;
+
 @end
 
 static NSString *leftCell = @"leftCell";
@@ -39,6 +41,8 @@ static NSString *rightCell = @"rightCell";
         _popoverView.leftTableView.delegate = self;
         _popoverView.leftTableView.dataSource = self;
   
+        _popoverView.rightTableView.delegate = self;
+        _popoverView.rightTableView.dataSource = self;
     }
     
     return _popoverView;
@@ -48,35 +52,66 @@ static NSString *rightCell = @"rightCell";
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.categoryArr.count;
+    if (tableView == _popoverView.leftTableView) {
+        return self.categoryArr.count;
+    } else {
+        return self.categoryArr[self.selectedRow].subcategories.count;
+    }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:leftCell];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:leftCell];
+    UITableViewCell *cell;
+    if (tableView == _popoverView.leftTableView) {
+        cell = [tableView dequeueReusableCellWithIdentifier:leftCell];
         
-        //设置背景图片
-        cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_leftpart"]];
-        cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_left_selected"]];
-    }
-    
-    cell.imageView.image = [UIImage imageNamed:self.categoryArr[indexPath.row].small_icon];
-    cell.imageView.highlightedImage = [UIImage imageNamed:self.categoryArr[indexPath.row].small_highlighted_icon];
-    cell.textLabel.text = self.categoryArr[indexPath.row].name;
-    
-    //设置箭头
-    if (self.categoryArr[indexPath.row].subcategories.count) {
-        cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:leftCell];
+            
+            //设置背景图片
+            cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_leftpart"]];
+            cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_left_selected"]];
+        }
+        
+        cell.imageView.image = [UIImage imageNamed:self.categoryArr[indexPath.row].small_icon];
+        cell.imageView.highlightedImage = [UIImage imageNamed:self.categoryArr[indexPath.row].small_highlighted_icon];
+        cell.textLabel.text = self.categoryArr[indexPath.row].name;
+        
+        //设置箭头
+        if (self.categoryArr[indexPath.row].subcategories.count) {
+            cell.accessoryType  = UITableViewCellAccessoryDisclosureIndicator;
+        } else {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
     } else {
-        cell.accessoryType = UITableViewCellAccessoryNone;
+        cell = [tableView dequeueReusableCellWithIdentifier:rightCell];
+        
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:rightCell];
+            
+            //设置背景图片
+            cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_rightpart"]];
+            cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg_dropdown_right_selected"]];
+        }
+        
+        cell.textLabel.text = self.categoryArr[self.selectedRow].subcategories[indexPath.row];
+
     }
     
     return cell;
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    //记录选中的一级菜单
+    if (tableView == _popoverView.leftTableView) {
+        self.selectedRow = indexPath.row;
+        [_popoverView.rightTableView reloadData];
+    } else {
+        LxcLog(@"%@",self.categoryArr[self.selectedRow].subcategories[indexPath.row]);
+    }
+}
 
 
 
