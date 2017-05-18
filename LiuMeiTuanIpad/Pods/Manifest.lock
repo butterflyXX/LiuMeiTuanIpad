@@ -1,12 +1,15 @@
 PODS:
+  - Masonry (1.0.2)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
+  - Masonry (~> 1.0.2)
   - YYModel (~> 1.0.4)
 
 SPEC CHECKSUMS:
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: e42a7fb2383a99712e9421c25184d8a0737a1aa4
+PODFILE CHECKSUM: c4716d0bb93faea0782172ccfe9417bb6a26e5e2
 
 COCOAPODS: 1.2.0

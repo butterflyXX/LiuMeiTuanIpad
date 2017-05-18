@@ -26,6 +26,9 @@
 		33271FFD1ECC7AB90064DF9B /* LXCPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33271FFC1ECC7AB90064DF9B /* LXCPopoverView.m */; };
 		33271FFF1ECC7AC60064DF9B /* LXCPopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33271FFE1ECC7AC60064DF9B /* LXCPopoverView.xib */; };
 		332720021ECD465B0064DF9B /* LXCCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 332720011ECD465B0064DF9B /* LXCCategoryModel.m */; };
+		3327200D1ECD525B0064DF9B /* LXCDistrictViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3327200A1ECD525B0064DF9B /* LXCDistrictViewController.m */; };
+		332720101ECD52870064DF9B /* LXCDistrictModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3327200F1ECD52870064DF9B /* LXCDistrictModel.m */; };
+		332720131ECD53530064DF9B /* LXCCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 332720121ECD53530064DF9B /* LXCCityModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,12 @@
 		33271FFE1ECC7AC60064DF9B /* LXCPopoverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXCPopoverView.xib; sourceTree = "<group>"; };
 		332720001ECD465B0064DF9B /* LXCCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCCategoryModel.h; sourceTree = "<group>"; };
 		332720011ECD465B0064DF9B /* LXCCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCCategoryModel.m; sourceTree = "<group>"; };
+		332720091ECD525B0064DF9B /* LXCDistrictViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCDistrictViewController.h; sourceTree = "<group>"; };
+		3327200A1ECD525B0064DF9B /* LXCDistrictViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCDistrictViewController.m; sourceTree = "<group>"; };
+		3327200E1ECD52870064DF9B /* LXCDistrictModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCDistrictModel.h; sourceTree = "<group>"; };
+		3327200F1ECD52870064DF9B /* LXCDistrictModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCDistrictModel.m; sourceTree = "<group>"; };
+		332720111ECD53530064DF9B /* LXCCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCCityModel.h; sourceTree = "<group>"; };
+		332720121ECD53530064DF9B /* LXCCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCCityModel.m; sourceTree = "<group>"; };
 		3DA9332FB881611F9CD21DBC /* libPods-LiuMeiTuanIpad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LiuMeiTuanIpad.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		939C31A0B451ADD4EABBA2F9 /* Pods-LiuMeiTuanIpad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiuMeiTuanIpad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiuMeiTuanIpad/Pods-LiuMeiTuanIpad.debug.xcconfig"; sourceTree = "<group>"; };
 		EFCD8D0664FA612A03F66FFD /* Pods-LiuMeiTuanIpad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiuMeiTuanIpad.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiuMeiTuanIpad/Pods-LiuMeiTuanIpad.release.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +148,7 @@
 		33271FCC1ECB35E10064DF9B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				332720071ECD525B0064DF9B /* District */,
 				33271FEE1ECC70880064DF9B /* Category */,
 				33271FCD1ECB35E10064DF9B /* Home */,
 				33271FD11ECB35E10064DF9B /* Main */,
@@ -285,6 +295,43 @@
 			name = View;
 			sourceTree = "<group>";
 		};
+		332720071ECD525B0064DF9B /* District */ = {
+			isa = PBXGroup;
+			children = (
+				332720081ECD525B0064DF9B /* Controller */,
+				3327200B1ECD525B0064DF9B /* Model */,
+				3327200C1ECD525B0064DF9B /* View */,
+			);
+			path = District;
+			sourceTree = "<group>";
+		};
+		332720081ECD525B0064DF9B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				332720091ECD525B0064DF9B /* LXCDistrictViewController.h */,
+				3327200A1ECD525B0064DF9B /* LXCDistrictViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3327200B1ECD525B0064DF9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3327200E1ECD52870064DF9B /* LXCDistrictModel.h */,
+				3327200F1ECD52870064DF9B /* LXCDistrictModel.m */,
+				332720111ECD53530064DF9B /* LXCCityModel.h */,
+				332720121ECD53530064DF9B /* LXCCityModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3327200C1ECD525B0064DF9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FD8AEA184E1CFC1F6324D8B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,12 +468,15 @@
 			files = (
 				332720021ECD465B0064DF9B /* LXCCategoryModel.m in Sources */,
 				33271FB11ECAFCBF0064DF9B /* AppDelegate.m in Sources */,
+				3327200D1ECD525B0064DF9B /* LXCDistrictViewController.m in Sources */,
 				33271FE91ECBF6AE0064DF9B /* UIView+HMCategory.m in Sources */,
 				33271FFD1ECC7AB90064DF9B /* LXCPopoverView.m in Sources */,
 				33271FF41ECC70880064DF9B /* LXCCategoryViewController.m in Sources */,
 				33271FD91ECBD6300064DF9B /* LXCBaseTabBarController.m in Sources */,
 				33271FDC1ECBD64C0064DF9B /* LXCBaseNavigationController.m in Sources */,
 				33271FF71ECC70D10064DF9B /* LXCHomeNavItem.m in Sources */,
+				332720101ECD52870064DF9B /* LXCDistrictModel.m in Sources */,
+				332720131ECD53530064DF9B /* LXCCityModel.m in Sources */,
 				33271FE51ECBF6320064DF9B /* UIBarButtonItem+HMCategory.m in Sources */,
 				33271FAE1ECAFCBF0064DF9B /* main.m in Sources */,
 				33271FDF1ECBDD390064DF9B /* LXCHomeViewController.m in Sources */,

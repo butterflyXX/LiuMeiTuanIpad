@@ -13,10 +13,14 @@
 #import "UIView+HMCategory.h"
 #import <YYModel.h>
 #import "LXCCategoryModel.h"
+#import "LXCDistrictViewController.h"
+#import "LXCCityModel.h"
 
 @interface LXCHomeViewController ()
 
 @property(nonatomic,strong)NSArray<LXCCategoryModel *> *categoryDataArr;
+@property(nonatomic,strong)NSArray *districtDataArr;
+@property(nonatomic,copy)NSString *currenCity;
 
 @end
 
@@ -128,7 +132,22 @@
 
 //点击区域按钮
 -(void)districtClick {
-    LxcLog(@"点击区域了");
+    
+    //跳转category控制器(popover)
+    LXCDistrictViewController *districtVc = [LXCDistrictViewController new];
+    districtVc.city = [self cityWithCityName:self.currenCity];
+    districtVc.modalPresentationStyle = UIModalPresentationPopover;
+    
+    UIPopoverPresentationController *popover = districtVc.popoverPresentationController;
+    
+    //设置参考视图
+    popover.barButtonItem = self.navigationItem.leftBarButtonItems[2];
+    
+    //设置大小
+    districtVc.preferredContentSize = CGSizeMake(districtVc.popoverView.width, CGRectGetMaxY(districtVc.popoverView.frame));
+    
+    [self presentViewController:districtVc animated:YES completion:nil];
+    
 }
 
 //点击排序按钮
@@ -140,9 +159,29 @@
     
     //解析category数据
     NSString *categoryPath = [[NSBundle mainBundle] pathForResource:@"categories.plist" ofType:nil];
-    NSArray *tempArr = [NSArray arrayWithContentsOfFile:categoryPath];
-    self.categoryDataArr = [NSArray yy_modelArrayWithClass:[LXCCategoryModel class] json:tempArr];
+    NSArray *categoryTempArr = [NSArray arrayWithContentsOfFile:categoryPath];
+    self.categoryDataArr = [NSArray yy_modelArrayWithClass:[LXCCategoryModel class] json:categoryTempArr];
     
+    //解析city数据
+    NSString *cityPath = [[NSBundle mainBundle] pathForResource:@"cities.plist" ofType:nil];
+    NSArray *cityTempArr = [NSArray arrayWithContentsOfFile:cityPath];
+    self.districtDataArr = [NSArray yy_modelArrayWithClass:[LXCCityModel class] json:cityTempArr];
+    
+    self.currenCity = @"北京";
+    
+}
+
+//根据城市名称返回数城市数据
+-(LXCCityModel *)cityWithCityName:(NSString *)cityName {
+    
+    for (LXCCityModel *cityModel in self.districtDataArr) {
+        
+        if ([cityName isEqualToString:cityModel.name]) {
+            return cityModel;
+        }
+    }
+    
+    return nil;
 }
 
 
