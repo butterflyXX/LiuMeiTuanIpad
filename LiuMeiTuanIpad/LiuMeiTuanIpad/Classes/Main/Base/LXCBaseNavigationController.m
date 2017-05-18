@@ -14,6 +14,14 @@
 
 @implementation LXCBaseNavigationController
 
++(void)initialize {
+    
+    //设置主题
+    UINavigationBar *bar = [UINavigationBar appearance];
+    
+    [bar setBackgroundImage:[UIImage imageNamed:@"bg_navigationBar_normal"] forBarMetrics:UIBarMetricsDefault];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0769CAA3A2920DCC9DE28008 /* libPods-LiuMeiTuanIpad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DA9332FB881611F9CD21DBC /* libPods-LiuMeiTuanIpad.a */; };
 		33271FAE1ECAFCBF0064DF9B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33271FAD1ECAFCBF0064DF9B /* main.m */; };
 		33271FB11ECAFCBF0064DF9B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33271FB01ECAFCBF0064DF9B /* AppDelegate.m */; };
 		33271FB91ECAFCBF0064DF9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33271FB81ECAFCBF0064DF9B /* Assets.xcassets */; };
@@ -16,6 +17,15 @@
 		33271FCB1ECB33A60064DF9B /* sorts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33271FC71ECB33A60064DF9B /* sorts.plist */; };
 		33271FD91ECBD6300064DF9B /* LXCBaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33271FD81ECBD6300064DF9B /* LXCBaseTabBarController.m */; };
 		33271FDC1ECBD64C0064DF9B /* LXCBaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33271FDB1ECBD64C0064DF9B /* LXCBaseNavigationController.m */; };
+		33271FDF1ECBDD390064DF9B /* LXCHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33271FDE1ECBDD390064DF9B /* LXCHomeViewController.m */; };
+		33271FE51ECBF6320064DF9B /* UIBarButtonItem+HMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 33271FE21ECBF6320064DF9B /* UIBarButtonItem+HMCategory.m */; };
+		33271FE91ECBF6AE0064DF9B /* UIView+HMCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 33271FE81ECBF6AE0064DF9B /* UIView+HMCategory.m */; };
+		33271FF41ECC70880064DF9B /* LXCCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33271FF11ECC70880064DF9B /* LXCCategoryViewController.m */; };
+		33271FF71ECC70D10064DF9B /* LXCHomeNavItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 33271FF61ECC70D10064DF9B /* LXCHomeNavItem.m */; };
+		33271FF91ECC70E50064DF9B /* LXCHomeNavItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33271FF81ECC70E50064DF9B /* LXCHomeNavItem.xib */; };
+		33271FFD1ECC7AB90064DF9B /* LXCPopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33271FFC1ECC7AB90064DF9B /* LXCPopoverView.m */; };
+		33271FFF1ECC7AC60064DF9B /* LXCPopoverView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33271FFE1ECC7AC60064DF9B /* LXCPopoverView.xib */; };
+		332720021ECD465B0064DF9B /* LXCCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 332720011ECD465B0064DF9B /* LXCCategoryModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +43,26 @@
 		33271FD81ECBD6300064DF9B /* LXCBaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCBaseTabBarController.m; sourceTree = "<group>"; };
 		33271FDA1ECBD64C0064DF9B /* LXCBaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCBaseNavigationController.h; sourceTree = "<group>"; };
 		33271FDB1ECBD64C0064DF9B /* LXCBaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCBaseNavigationController.m; sourceTree = "<group>"; };
+		33271FDD1ECBDD390064DF9B /* LXCHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCHomeViewController.h; sourceTree = "<group>"; };
+		33271FDE1ECBDD390064DF9B /* LXCHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCHomeViewController.m; sourceTree = "<group>"; };
+		33271FE01ECBDE480064DF9B /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		33271FE11ECBF6320064DF9B /* UIBarButtonItem+HMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+HMCategory.h"; sourceTree = "<group>"; };
+		33271FE21ECBF6320064DF9B /* UIBarButtonItem+HMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+HMCategory.m"; sourceTree = "<group>"; };
+		33271FE71ECBF6AE0064DF9B /* UIView+HMCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HMCategory.h"; sourceTree = "<group>"; };
+		33271FE81ECBF6AE0064DF9B /* UIView+HMCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HMCategory.m"; sourceTree = "<group>"; };
+		33271FF01ECC70880064DF9B /* LXCCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCCategoryViewController.h; sourceTree = "<group>"; };
+		33271FF11ECC70880064DF9B /* LXCCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCCategoryViewController.m; sourceTree = "<group>"; };
+		33271FF51ECC70D10064DF9B /* LXCHomeNavItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCHomeNavItem.h; sourceTree = "<group>"; };
+		33271FF61ECC70D10064DF9B /* LXCHomeNavItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCHomeNavItem.m; sourceTree = "<group>"; };
+		33271FF81ECC70E50064DF9B /* LXCHomeNavItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXCHomeNavItem.xib; sourceTree = "<group>"; };
+		33271FFB1ECC7AB90064DF9B /* LXCPopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCPopoverView.h; sourceTree = "<group>"; };
+		33271FFC1ECC7AB90064DF9B /* LXCPopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCPopoverView.m; sourceTree = "<group>"; };
+		33271FFE1ECC7AC60064DF9B /* LXCPopoverView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXCPopoverView.xib; sourceTree = "<group>"; };
+		332720001ECD465B0064DF9B /* LXCCategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCCategoryModel.h; sourceTree = "<group>"; };
+		332720011ECD465B0064DF9B /* LXCCategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCCategoryModel.m; sourceTree = "<group>"; };
+		3DA9332FB881611F9CD21DBC /* libPods-LiuMeiTuanIpad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LiuMeiTuanIpad.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		939C31A0B451ADD4EABBA2F9 /* Pods-LiuMeiTuanIpad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiuMeiTuanIpad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiuMeiTuanIpad/Pods-LiuMeiTuanIpad.debug.xcconfig"; sourceTree = "<group>"; };
+		EFCD8D0664FA612A03F66FFD /* Pods-LiuMeiTuanIpad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiuMeiTuanIpad.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiuMeiTuanIpad/Pods-LiuMeiTuanIpad.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,17 +70,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0769CAA3A2920DCC9DE28008 /* libPods-LiuMeiTuanIpad.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		008A972A42035CBBA8A5BF1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				939C31A0B451ADD4EABBA2F9 /* Pods-LiuMeiTuanIpad.debug.xcconfig */,
+				EFCD8D0664FA612A03F66FFD /* Pods-LiuMeiTuanIpad.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		33271FA01ECAFCBF0064DF9B = {
 			isa = PBXGroup;
 			children = (
 				33271FAB1ECAFCBF0064DF9B /* LiuMeiTuanIpad */,
 				33271FAA1ECAFCBF0064DF9B /* Products */,
+				008A972A42035CBBA8A5BF1B /* Pods */,
+				FD8AEA184E1CFC1F6324D8B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,7 +109,6 @@
 			children = (
 				33271FCC1ECB35E10064DF9B /* Classes */,
 				33271FB81ECAFCBF0064DF9B /* Assets.xcassets */,
-				33271FBD1ECAFCBF0064DF9B /* Info.plist */,
 				33271FAC1ECAFCBF0064DF9B /* Supporting Files */,
 			);
 			path = LiuMeiTuanIpad;
@@ -76,6 +117,8 @@
 		33271FAC1ECAFCBF0064DF9B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				33271FBD1ECAFCBF0064DF9B /* Info.plist */,
+				33271FE01ECBDE480064DF9B /* PrefixHeader.pch */,
 				33271FAD1ECAFCBF0064DF9B /* main.m */,
 				33271FC31ECB33A60064DF9B /* Plist */,
 			);
@@ -96,6 +139,7 @@
 		33271FCC1ECB35E10064DF9B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				33271FEE1ECC70880064DF9B /* Category */,
 				33271FCD1ECB35E10064DF9B /* Home */,
 				33271FD11ECB35E10064DF9B /* Main */,
 			);
@@ -115,6 +159,8 @@
 		33271FCE1ECB35E10064DF9B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				33271FDD1ECBDD390064DF9B /* LXCHomeViewController.h */,
+				33271FDE1ECBDD390064DF9B /* LXCHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -129,6 +175,9 @@
 		33271FD01ECB35E10064DF9B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				33271FF51ECC70D10064DF9B /* LXCHomeNavItem.h */,
+				33271FF61ECC70D10064DF9B /* LXCHomeNavItem.m */,
+				33271FF81ECC70E50064DF9B /* LXCHomeNavItem.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +185,7 @@
 		33271FD11ECB35E10064DF9B /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				33271FFA1ECC7A970064DF9B /* View */,
 				33271FD21ECB35E10064DF9B /* Base */,
 				33271FD31ECB35E10064DF9B /* Category */,
 				33271FD41ECB35E10064DF9B /* Lib */,
@@ -159,6 +209,10 @@
 		33271FD31ECB35E10064DF9B /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				33271FE11ECBF6320064DF9B /* UIBarButtonItem+HMCategory.h */,
+				33271FE21ECBF6320064DF9B /* UIBarButtonItem+HMCategory.m */,
+				33271FE71ECBF6AE0064DF9B /* UIView+HMCategory.h */,
+				33271FE81ECBF6AE0064DF9B /* UIView+HMCategory.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -186,6 +240,59 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		33271FEE1ECC70880064DF9B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				33271FEF1ECC70880064DF9B /* Controller */,
+				33271FF21ECC70880064DF9B /* Model */,
+				33271FF31ECC70880064DF9B /* View */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		33271FEF1ECC70880064DF9B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				33271FF01ECC70880064DF9B /* LXCCategoryViewController.h */,
+				33271FF11ECC70880064DF9B /* LXCCategoryViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		33271FF21ECC70880064DF9B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				332720001ECD465B0064DF9B /* LXCCategoryModel.h */,
+				332720011ECD465B0064DF9B /* LXCCategoryModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33271FF31ECC70880064DF9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		33271FFA1ECC7A970064DF9B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33271FFB1ECC7AB90064DF9B /* LXCPopoverView.h */,
+				33271FFC1ECC7AB90064DF9B /* LXCPopoverView.m */,
+				33271FFE1ECC7AC60064DF9B /* LXCPopoverView.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		FD8AEA184E1CFC1F6324D8B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DA9332FB881611F9CD21DBC /* libPods-LiuMeiTuanIpad.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,9 +300,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33271FC01ECAFCBF0064DF9B /* Build configuration list for PBXNativeTarget "LiuMeiTuanIpad" */;
 			buildPhases = (
+				E1C092E73F3095372518537F /* [CP] Check Pods Manifest.lock */,
 				33271FA51ECAFCBF0064DF9B /* Sources */,
 				33271FA61ECAFCBF0064DF9B /* Frameworks */,
 				33271FA71ECAFCBF0064DF9B /* Resources */,
+				7DCF4A171EE873CF9FFC1705 /* [CP] Embed Pods Frameworks */,
+				0BEA12ACB4E24C947EC4D778 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,6 +357,8 @@
 				33271FC91ECB33A60064DF9B /* cities.plist in Resources */,
 				33271FC81ECB33A60064DF9B /* categories.plist in Resources */,
 				33271FCB1ECB33A60064DF9B /* sorts.plist in Resources */,
+				33271FF91ECC70E50064DF9B /* LXCHomeNavItem.xib in Resources */,
+				33271FFF1ECC7AC60064DF9B /* LXCPopoverView.xib in Resources */,
 				33271FB91ECAFCBF0064DF9B /* Assets.xcassets in Resources */,
 				33271FCA1ECB33A60064DF9B /* cityGroups.plist in Resources */,
 			);
@@ -254,15 +366,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0BEA12ACB4E24C947EC4D778 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiuMeiTuanIpad/Pods-LiuMeiTuanIpad-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DCF4A171EE873CF9FFC1705 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LiuMeiTuanIpad/Pods-LiuMeiTuanIpad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1C092E73F3095372518537F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		33271FA51ECAFCBF0064DF9B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				332720021ECD465B0064DF9B /* LXCCategoryModel.m in Sources */,
 				33271FB11ECAFCBF0064DF9B /* AppDelegate.m in Sources */,
+				33271FE91ECBF6AE0064DF9B /* UIView+HMCategory.m in Sources */,
+				33271FFD1ECC7AB90064DF9B /* LXCPopoverView.m in Sources */,
+				33271FF41ECC70880064DF9B /* LXCCategoryViewController.m in Sources */,
 				33271FD91ECBD6300064DF9B /* LXCBaseTabBarController.m in Sources */,
 				33271FDC1ECBD64C0064DF9B /* LXCBaseNavigationController.m in Sources */,
+				33271FF71ECC70D10064DF9B /* LXCHomeNavItem.m in Sources */,
+				33271FE51ECBF6320064DF9B /* UIBarButtonItem+HMCategory.m in Sources */,
 				33271FAE1ECAFCBF0064DF9B /* main.m in Sources */,
+				33271FDF1ECBDD390064DF9B /* LXCHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,9 +530,11 @@
 		};
 		33271FC11ECAFCBF0064DF9B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 939C31A0B451ADD4EABBA2F9 /* Pods-LiuMeiTuanIpad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = LiuMeiTuanIpad/PrefixHeader.pch;
 				INFOPLIST_FILE = LiuMeiTuanIpad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -376,9 +545,11 @@
 		};
 		33271FC21ECAFCBF0064DF9B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFCD8D0664FA612A03F66FFD /* Pods-LiuMeiTuanIpad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = LiuMeiTuanIpad/PrefixHeader.pch;
 				INFOPLIST_FILE = LiuMeiTuanIpad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

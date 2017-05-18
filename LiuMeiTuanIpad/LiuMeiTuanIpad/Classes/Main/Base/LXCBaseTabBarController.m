@@ -7,6 +7,8 @@
 //
 
 #import "LXCBaseTabBarController.h"
+#import "LXCHomeViewController.h"
+#import "LXCBaseNavigationController.h"
 
 @interface LXCBaseTabBarController ()
 
@@ -17,6 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    LXCHomeViewController *rootVc = [LXCHomeViewController new];
+    
+    LXCBaseNavigationController *nav = [[LXCBaseNavigationController alloc] initWithRootViewController:rootVc];
+    
+    [self addChildViewController:nav];
 }
 
 - (void)didReceiveMemoryWarning {

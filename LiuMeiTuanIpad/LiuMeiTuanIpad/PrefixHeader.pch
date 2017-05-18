@@ -1,0 +1,44 @@
+//
+//  PrefixHeader.pch
+//  LiuMeiTuanIpad
+//
+//  Created by 刘晓晨 on 2017/5/17.
+//  Copyright © 2017年 刘晓晨. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//颜色宏
+# define LXCHomeColor(r,g,b) [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1]
+
+/**
+ * 头文件
+ */
+//xcode可以执行多种源代码(.m .mm .cpp .c),但是如果.cpp和.c引用到oc相关的内容,就会报错
+#ifdef __OBJC__  //在该宏中引用的头文件不会被oc以外的文件引用到
+
+#import <UIKit/UIKit.h>
+
+#endif
+
+
+
+/**
+ * 宏定义
+ */
+
+
+
+//打印宏 根据Debug和Release模式区分  测试是执行打印,发布时相当于注释
+#ifdef DEBUG
+#define LxcLog(fmt, ...)  fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:fmt, ##__VA_ARGS__] UTF8String]);
+#else
+#define LxcLog(...)
+#endif
+
+
+#endif /* PrefixHeader_pch */
