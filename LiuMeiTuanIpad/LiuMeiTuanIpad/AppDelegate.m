@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-#import "LXCBaseTabBarController.h"
+#import "LXCBaseNavigationController.h"
+#import "LXCHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -23,11 +24,13 @@
     
 //    self.window
     
-    LXCBaseTabBarController *rootVc = [LXCBaseTabBarController new];
+    LXCHomeViewController *rootVc = [LXCHomeViewController new];
+    
+    LXCBaseNavigationController *nav = [[LXCBaseNavigationController alloc] initWithRootViewController:rootVc];
     
 //    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:rootVc];
     
-    self.window.rootViewController = rootVc;
+    self.window.rootViewController = nav;
     
     [self.window makeKeyAndVisible];
     return YES;

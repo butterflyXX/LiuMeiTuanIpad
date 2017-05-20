@@ -29,6 +29,23 @@
 		3327200D1ECD525B0064DF9B /* LXCDistrictViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3327200A1ECD525B0064DF9B /* LXCDistrictViewController.m */; };
 		332720101ECD52870064DF9B /* LXCDistrictModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3327200F1ECD52870064DF9B /* LXCDistrictModel.m */; };
 		332720131ECD53530064DF9B /* LXCCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 332720121ECD53530064DF9B /* LXCCityModel.m */; };
+		339DA35D1ECE985B00A00266 /* LXCSearchCityControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DA35B1ECE985B00A00266 /* LXCSearchCityControllerViewController.m */; };
+		339DA3611ECF0DDF00A00266 /* LXCCityGroupsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DA3601ECF0DDF00A00266 /* LXCCityGroupsModel.m */; };
+		339DA3681ECF1DDF00A00266 /* LXCSearchViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DA3671ECF1DDF00A00266 /* LXCSearchViewControllerTableViewController.m */; };
+		339DA36B1ED0166900A00266 /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DA36A1ED0166900A00266 /* Common.m */; };
+		339DA3731ED05D4E00A00266 /* LXCSortController.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DA3721ED05D4E00A00266 /* LXCSortController.m */; };
+		339DA3761ED05DB000A00266 /* LXCSortModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DA3751ED05DB000A00266 /* LXCSortModel.m */; };
+		339DA37C1ED0616900A00266 /* LXCDealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DA37A1ED0616900A00266 /* LXCDealCell.m */; };
+		339DA37D1ED0616900A00266 /* LXCDealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339DA37B1ED0616900A00266 /* LXCDealCell.xib */; };
+		339DA3801ED061F400A00266 /* LXCDealModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DA37F1ED061F400A00266 /* LXCDealModel.m */; };
+		339DA3831ED0646200A00266 /* LXCDateFormater.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DA3821ED0646200A00266 /* LXCDateFormater.m */; };
+		339DA38D1ED06AF900A00266 /* DPAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DA3891ED06AF900A00266 /* DPAPI.m */; };
+		339DA38E1ED06AF900A00266 /* DPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DA38C1ED06AF900A00266 /* DPRequest.m */; };
+		339DA3911ED0744D00A00266 /* LXCOriginalPriceLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DA3901ED0744D00A00266 /* LXCOriginalPriceLabel.m */; };
+		339DA3971ED075CD00A00266 /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DA3941ED075CD00A00266 /* AwesomeMenu.m */; };
+		339DA3981ED075CD00A00266 /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DA3961ED075CD00A00266 /* AwesomeMenuItem.m */; };
+		339DA3A01ED07B2300A00266 /* LXCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 339DA39E1ED07B2300A00266 /* LXCDetailViewController.m */; };
+		339DA3A11ED07B2300A00266 /* LXCDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 339DA39F1ED07B2300A00266 /* LXCDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +86,39 @@
 		3327200F1ECD52870064DF9B /* LXCDistrictModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCDistrictModel.m; sourceTree = "<group>"; };
 		332720111ECD53530064DF9B /* LXCCityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCCityModel.h; sourceTree = "<group>"; };
 		332720121ECD53530064DF9B /* LXCCityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCCityModel.m; sourceTree = "<group>"; };
+		339DA35A1ECE985B00A00266 /* LXCSearchCityControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCSearchCityControllerViewController.h; sourceTree = "<group>"; };
+		339DA35B1ECE985B00A00266 /* LXCSearchCityControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCSearchCityControllerViewController.m; sourceTree = "<group>"; };
+		339DA35F1ECF0DDF00A00266 /* LXCCityGroupsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCCityGroupsModel.h; sourceTree = "<group>"; };
+		339DA3601ECF0DDF00A00266 /* LXCCityGroupsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCCityGroupsModel.m; sourceTree = "<group>"; };
+		339DA3661ECF1DDF00A00266 /* LXCSearchViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCSearchViewControllerTableViewController.h; sourceTree = "<group>"; };
+		339DA3671ECF1DDF00A00266 /* LXCSearchViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCSearchViewControllerTableViewController.m; sourceTree = "<group>"; };
+		339DA3691ED0166900A00266 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Common.h; path = Other/Common.h; sourceTree = "<group>"; };
+		339DA36A1ED0166900A00266 /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Common.m; path = Other/Common.m; sourceTree = "<group>"; };
+		339DA3711ED05D4E00A00266 /* LXCSortController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCSortController.h; sourceTree = "<group>"; };
+		339DA3721ED05D4E00A00266 /* LXCSortController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCSortController.m; sourceTree = "<group>"; };
+		339DA3741ED05DB000A00266 /* LXCSortModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCSortModel.h; sourceTree = "<group>"; };
+		339DA3751ED05DB000A00266 /* LXCSortModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCSortModel.m; sourceTree = "<group>"; };
+		339DA3791ED0616900A00266 /* LXCDealCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCDealCell.h; sourceTree = "<group>"; };
+		339DA37A1ED0616900A00266 /* LXCDealCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCDealCell.m; sourceTree = "<group>"; };
+		339DA37B1ED0616900A00266 /* LXCDealCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXCDealCell.xib; sourceTree = "<group>"; };
+		339DA37E1ED061F400A00266 /* LXCDealModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCDealModel.h; sourceTree = "<group>"; };
+		339DA37F1ED061F400A00266 /* LXCDealModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCDealModel.m; sourceTree = "<group>"; };
+		339DA3811ED0646200A00266 /* LXCDateFormater.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCDateFormater.h; sourceTree = "<group>"; };
+		339DA3821ED0646200A00266 /* LXCDateFormater.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCDateFormater.m; sourceTree = "<group>"; };
+		339DA3881ED06AF900A00266 /* DPAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPAPI.h; sourceTree = "<group>"; };
+		339DA3891ED06AF900A00266 /* DPAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPAPI.m; sourceTree = "<group>"; };
+		339DA38A1ED06AF900A00266 /* DPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPConstants.h; sourceTree = "<group>"; };
+		339DA38B1ED06AF900A00266 /* DPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRequest.h; sourceTree = "<group>"; };
+		339DA38C1ED06AF900A00266 /* DPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRequest.m; sourceTree = "<group>"; };
+		339DA38F1ED0744D00A00266 /* LXCOriginalPriceLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXCOriginalPriceLabel.h; sourceTree = "<group>"; };
+		339DA3901ED0744D00A00266 /* LXCOriginalPriceLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXCOriginalPriceLabel.m; sourceTree = "<group>"; };
+		339DA3931ED075CD00A00266 /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
+		339DA3941ED075CD00A00266 /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
+		339DA3951ED075CD00A00266 /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
+		339DA3961ED075CD00A00266 /* AwesomeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenuItem.m; sourceTree = "<group>"; };
+		339DA39D1ED07B2300A00266 /* LXCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LXCDetailViewController.h; path = ../LXCDetailViewController.h; sourceTree = "<group>"; };
+		339DA39E1ED07B2300A00266 /* LXCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LXCDetailViewController.m; path = ../LXCDetailViewController.m; sourceTree = "<group>"; };
+		339DA39F1ED07B2300A00266 /* LXCDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LXCDetailViewController.xib; path = ../LXCDetailViewController.xib; sourceTree = "<group>"; };
 		3DA9332FB881611F9CD21DBC /* libPods-LiuMeiTuanIpad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LiuMeiTuanIpad.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		939C31A0B451ADD4EABBA2F9 /* Pods-LiuMeiTuanIpad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiuMeiTuanIpad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LiuMeiTuanIpad/Pods-LiuMeiTuanIpad.debug.xcconfig"; sourceTree = "<group>"; };
 		EFCD8D0664FA612A03F66FFD /* Pods-LiuMeiTuanIpad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiuMeiTuanIpad.release.xcconfig"; path = "Pods/Target Support Files/Pods-LiuMeiTuanIpad/Pods-LiuMeiTuanIpad.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +198,10 @@
 		33271FCC1ECB35E10064DF9B /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				339DA3991ED07B0400A00266 /* Details */,
+				339DA36D1ED05CEA00A00266 /* Sort */,
+				339DA3621ECF1DC100A00266 /* SearchViewController */,
+				339DA3561ECE983000A00266 /* SearchCity */,
 				332720071ECD525B0064DF9B /* District */,
 				33271FEE1ECC70880064DF9B /* Category */,
 				33271FCD1ECB35E10064DF9B /* Home */,
@@ -178,6 +232,8 @@
 		33271FCF1ECB35E10064DF9B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				339DA37E1ED061F400A00266 /* LXCDealModel.h */,
+				339DA37F1ED061F400A00266 /* LXCDealModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,9 +241,8 @@
 		33271FD01ECB35E10064DF9B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				33271FF51ECC70D10064DF9B /* LXCHomeNavItem.h */,
-				33271FF61ECC70D10064DF9B /* LXCHomeNavItem.m */,
-				33271FF81ECC70E50064DF9B /* LXCHomeNavItem.xib */,
+				339DA3781ED0615100A00266 /* LXCDealCell */,
+				339DA3771ED0614000A00266 /* LXCHomeNavView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,6 +250,7 @@
 		33271FD11ECB35E10064DF9B /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				339DA36C1ED0167F00A00266 /* common */,
 				33271FFA1ECC7A970064DF9B /* View */,
 				33271FD21ECB35E10064DF9B /* Base */,
 				33271FD31ECB35E10064DF9B /* Category */,
@@ -223,6 +279,8 @@
 				33271FE21ECBF6320064DF9B /* UIBarButtonItem+HMCategory.m */,
 				33271FE71ECBF6AE0064DF9B /* UIView+HMCategory.h */,
 				33271FE81ECBF6AE0064DF9B /* UIView+HMCategory.m */,
+				339DA38F1ED0744D00A00266 /* LXCOriginalPriceLabel.h */,
+				339DA3901ED0744D00A00266 /* LXCOriginalPriceLabel.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -230,6 +288,8 @@
 		33271FD41ECB35E10064DF9B /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				339DA3921ED0759C00A00266 /* AwesomeMenu */,
+				339DA3871ED06AEB00A00266 /* MeiTuanSDK */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -246,6 +306,8 @@
 		33271FD61ECB35E10064DF9B /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				339DA3811ED0646200A00266 /* LXCDateFormater.h */,
+				339DA3821ED0646200A00266 /* LXCDateFormater.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -332,6 +394,195 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		339DA3561ECE983000A00266 /* SearchCity */ = {
+			isa = PBXGroup;
+			children = (
+				339DA3571ECE983000A00266 /* Controller */,
+				339DA3581ECE983000A00266 /* Model */,
+				339DA3591ECE983000A00266 /* View */,
+			);
+			path = SearchCity;
+			sourceTree = "<group>";
+		};
+		339DA3571ECE983000A00266 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				339DA35A1ECE985B00A00266 /* LXCSearchCityControllerViewController.h */,
+				339DA35B1ECE985B00A00266 /* LXCSearchCityControllerViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		339DA3581ECE983000A00266 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				339DA35F1ECF0DDF00A00266 /* LXCCityGroupsModel.h */,
+				339DA3601ECF0DDF00A00266 /* LXCCityGroupsModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		339DA3591ECE983000A00266 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		339DA3621ECF1DC100A00266 /* SearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				339DA3631ECF1DC100A00266 /* Controller */,
+				339DA3641ECF1DC100A00266 /* Model */,
+				339DA3651ECF1DC100A00266 /* View */,
+			);
+			path = SearchViewController;
+			sourceTree = "<group>";
+		};
+		339DA3631ECF1DC100A00266 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				339DA3661ECF1DDF00A00266 /* LXCSearchViewControllerTableViewController.h */,
+				339DA3671ECF1DDF00A00266 /* LXCSearchViewControllerTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		339DA3641ECF1DC100A00266 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		339DA3651ECF1DC100A00266 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		339DA36C1ED0167F00A00266 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				339DA3691ED0166900A00266 /* Common.h */,
+				339DA36A1ED0166900A00266 /* Common.m */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		339DA36D1ED05CEA00A00266 /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				339DA36E1ED05CEA00A00266 /* Controller */,
+				339DA36F1ED05CEA00A00266 /* Model */,
+				339DA3701ED05CEA00A00266 /* View */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
+		339DA36E1ED05CEA00A00266 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				339DA3711ED05D4E00A00266 /* LXCSortController.h */,
+				339DA3721ED05D4E00A00266 /* LXCSortController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		339DA36F1ED05CEA00A00266 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				339DA3741ED05DB000A00266 /* LXCSortModel.h */,
+				339DA3751ED05DB000A00266 /* LXCSortModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		339DA3701ED05CEA00A00266 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		339DA3771ED0614000A00266 /* LXCHomeNavView */ = {
+			isa = PBXGroup;
+			children = (
+				33271FF51ECC70D10064DF9B /* LXCHomeNavItem.h */,
+				33271FF61ECC70D10064DF9B /* LXCHomeNavItem.m */,
+				33271FF81ECC70E50064DF9B /* LXCHomeNavItem.xib */,
+			);
+			name = LXCHomeNavView;
+			sourceTree = "<group>";
+		};
+		339DA3781ED0615100A00266 /* LXCDealCell */ = {
+			isa = PBXGroup;
+			children = (
+				339DA3791ED0616900A00266 /* LXCDealCell.h */,
+				339DA37A1ED0616900A00266 /* LXCDealCell.m */,
+				339DA37B1ED0616900A00266 /* LXCDealCell.xib */,
+			);
+			name = LXCDealCell;
+			sourceTree = "<group>";
+		};
+		339DA3871ED06AEB00A00266 /* MeiTuanSDK */ = {
+			isa = PBXGroup;
+			children = (
+				339DA3881ED06AF900A00266 /* DPAPI.h */,
+				339DA3891ED06AF900A00266 /* DPAPI.m */,
+				339DA38A1ED06AF900A00266 /* DPConstants.h */,
+				339DA38B1ED06AF900A00266 /* DPRequest.h */,
+				339DA38C1ED06AF900A00266 /* DPRequest.m */,
+			);
+			name = MeiTuanSDK;
+			sourceTree = "<group>";
+		};
+		339DA3921ED0759C00A00266 /* AwesomeMenu */ = {
+			isa = PBXGroup;
+			children = (
+				339DA3931ED075CD00A00266 /* AwesomeMenu.h */,
+				339DA3941ED075CD00A00266 /* AwesomeMenu.m */,
+				339DA3951ED075CD00A00266 /* AwesomeMenuItem.h */,
+				339DA3961ED075CD00A00266 /* AwesomeMenuItem.m */,
+			);
+			name = AwesomeMenu;
+			sourceTree = "<group>";
+		};
+		339DA3991ED07B0400A00266 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				339DA39A1ED07B0400A00266 /* Controller */,
+				339DA39B1ED07B0400A00266 /* Model */,
+				339DA39C1ED07B0400A00266 /* View */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
+		339DA39A1ED07B0400A00266 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				339DA39D1ED07B2300A00266 /* LXCDetailViewController.h */,
+				339DA39E1ED07B2300A00266 /* LXCDetailViewController.m */,
+				339DA39F1ED07B2300A00266 /* LXCDetailViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		339DA39B1ED07B0400A00266 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		339DA39C1ED07B0400A00266 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FD8AEA184E1CFC1F6324D8B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,9 +654,11 @@
 			files = (
 				33271FC91ECB33A60064DF9B /* cities.plist in Resources */,
 				33271FC81ECB33A60064DF9B /* categories.plist in Resources */,
+				339DA37D1ED0616900A00266 /* LXCDealCell.xib in Resources */,
 				33271FCB1ECB33A60064DF9B /* sorts.plist in Resources */,
 				33271FF91ECC70E50064DF9B /* LXCHomeNavItem.xib in Resources */,
 				33271FFF1ECC7AC60064DF9B /* LXCPopoverView.xib in Resources */,
+				339DA3A11ED07B2300A00266 /* LXCDetailViewController.xib in Resources */,
 				33271FB91ECAFCBF0064DF9B /* Assets.xcassets in Resources */,
 				33271FCA1ECB33A60064DF9B /* cityGroups.plist in Resources */,
 			);
@@ -466,17 +719,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				339DA38D1ED06AF900A00266 /* DPAPI.m in Sources */,
+				339DA3981ED075CD00A00266 /* AwesomeMenuItem.m in Sources */,
+				339DA3911ED0744D00A00266 /* LXCOriginalPriceLabel.m in Sources */,
+				339DA3611ECF0DDF00A00266 /* LXCCityGroupsModel.m in Sources */,
+				339DA3A01ED07B2300A00266 /* LXCDetailViewController.m in Sources */,
+				339DA3681ECF1DDF00A00266 /* LXCSearchViewControllerTableViewController.m in Sources */,
 				332720021ECD465B0064DF9B /* LXCCategoryModel.m in Sources */,
 				33271FB11ECAFCBF0064DF9B /* AppDelegate.m in Sources */,
 				3327200D1ECD525B0064DF9B /* LXCDistrictViewController.m in Sources */,
+				339DA3761ED05DB000A00266 /* LXCSortModel.m in Sources */,
 				33271FE91ECBF6AE0064DF9B /* UIView+HMCategory.m in Sources */,
+				339DA3831ED0646200A00266 /* LXCDateFormater.m in Sources */,
+				339DA36B1ED0166900A00266 /* Common.m in Sources */,
 				33271FFD1ECC7AB90064DF9B /* LXCPopoverView.m in Sources */,
 				33271FF41ECC70880064DF9B /* LXCCategoryViewController.m in Sources */,
+				339DA3731ED05D4E00A00266 /* LXCSortController.m in Sources */,
+				339DA37C1ED0616900A00266 /* LXCDealCell.m in Sources */,
 				33271FD91ECBD6300064DF9B /* LXCBaseTabBarController.m in Sources */,
 				33271FDC1ECBD64C0064DF9B /* LXCBaseNavigationController.m in Sources */,
+				339DA3801ED061F400A00266 /* LXCDealModel.m in Sources */,
 				33271FF71ECC70D10064DF9B /* LXCHomeNavItem.m in Sources */,
 				332720101ECD52870064DF9B /* LXCDistrictModel.m in Sources */,
 				332720131ECD53530064DF9B /* LXCCityModel.m in Sources */,
+				339DA3971ED075CD00A00266 /* AwesomeMenu.m in Sources */,
+				339DA38E1ED06AF900A00266 /* DPRequest.m in Sources */,
+				339DA35D1ECE985B00A00266 /* LXCSearchCityControllerViewController.m in Sources */,
 				33271FE51ECBF6320064DF9B /* UIBarButtonItem+HMCategory.m in Sources */,
 				33271FAE1ECAFCBF0064DF9B /* main.m in Sources */,
 				33271FDF1ECBDD390064DF9B /* LXCHomeViewController.m in Sources */,

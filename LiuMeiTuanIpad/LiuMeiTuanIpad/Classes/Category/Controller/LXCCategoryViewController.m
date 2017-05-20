@@ -106,10 +106,28 @@ static NSString *rightCell = @"rightCell";
     
     //记录选中的一级菜单
     if (tableView == _popoverView.leftTableView) {
-        self.selectedRow = indexPath.row;
-        [_popoverView.rightTableView reloadData];
+        
+        //判断是否有二级数据
+        if (self.categoryArr[indexPath.row].subcategories) {
+            
+            //有二级菜单
+            self.selectedRow = indexPath.row;
+            [_popoverView.rightTableView reloadData];
+            
+        } else {
+            
+            //没有二级菜单
+            //发送通知,移除控制器
+            [LXCNoteCenter postNotificationName:LXCCategoryDidChangeNote object:nil userInfo:@{LXCCategoryDidChangeNoteModelKey:self.categoryArr[indexPath.row]}];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
     } else {
-        LxcLog(@"%@",self.categoryArr[self.selectedRow].subcategories[indexPath.row]);
+        
+        //选中二级菜单
+        //发送通知,移除控制器
+        [LXCNoteCenter postNotificationName:LXCCategoryDidChangeNote object:nil userInfo:@{LXCCategoryDidChangeNoteModelKey:self.categoryArr[self.selectedRow],LXCCategoryDidChangeNoteSubtitleKey:self.categoryArr[self.selectedRow].subcategories[indexPath.row]}];
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
     }
 }
 

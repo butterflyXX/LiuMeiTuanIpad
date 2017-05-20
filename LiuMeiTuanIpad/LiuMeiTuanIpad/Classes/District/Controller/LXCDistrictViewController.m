@@ -9,6 +9,8 @@
 #import "LXCDistrictViewController.h"
 #import <Masonry.h>
 #import "UIView+HMCategory.h"
+#import "LXCSearchCityControllerViewController.h"
+#import "LXCBaseNavigationController.h"
 
 @interface LXCDistrictViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -20,6 +22,7 @@
 
 static NSString *leftCell = @"leftCell";
 static NSString *rightCell = @"rightCell";
+static CGFloat TOPVIEWHEIGHT = 40;
 
 @implementation LXCDistrictViewController
 
@@ -41,14 +44,41 @@ static NSString *rightCell = @"rightCell";
     
     //创建上部view
     _topView = [UIView new];
-    _topView.backgroundColor = [UIColor redColor];
+    
     [self.view addSubview:_topView];
+    _topView.backgroundColor = [UIColor whiteColor];
+    UIButton *changeCityButton = [UIButton new];
+    [_topView addSubview:changeCityButton];
+    [changeCityButton setTitle:@"切换城市" forState:UIControlStateNormal];
+    [changeCityButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [changeCityButton setImage:[UIImage imageNamed:@"btn_changeCity"] forState:UIControlStateNormal];
+    [changeCityButton setImage:[UIImage imageNamed:@"btn_changeCity_selected"] forState:UIControlStateHighlighted];
+    changeCityButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+    [changeCityButton addTarget:self action:@selector(changeBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    [changeCityButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.offset(0);
+    }];
     
     [_topView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.right.offset(0);
-        make.height.offset(40);
+        make.height.offset(TOPVIEWHEIGHT);
     }];
 
+    
+}
+
+-(void) changeBtnClick {
+    
+    //移除区域控制器
+    [self dismissViewControllerAnimated:YES completion:nil];
+    LXCSearchCityControllerViewController *searchVc = [LXCSearchCityControllerViewController new];
+    LXCBaseNavigationController *nav = [[LXCBaseNavigationController alloc] initWithRootViewController:searchVc];
+    
+    nav.modalPresentationStyle = UIModalPresentationFormSheet;
+    nav.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:nav animated:YES completion:nil];
     
 }
 
@@ -60,7 +90,7 @@ static NSString *rightCell = @"rightCell";
         //添加到视图上
         [self.view addSubview:_popoverView];
         
-        _popoverView.y = _topView.height;
+        _popoverView.y = TOPVIEWHEIGHT;
         
         //设置数据源代理
         _popoverView.leftTableView.delegate = self;
@@ -130,11 +160,29 @@ static NSString *rightCell = @"rightCell";
     
     //记录选中的一级菜单
     if (tableView == _popoverView.leftTableView) {
-        self.selectedRow = indexPath.row;
-        [_popoverView.rightTableView reloadData];
+        
+        //判断是否有二级数据
+        if (self.city.districts[indexPath.row].subdistricts) {
+            
+            //有二级菜单
+            self.selectedRow = indexPath.row;
+            [_popoverView.rightTableView reloadData];
+            
+        } else {
+            
+            //没有二级菜单
+            //发送通知,移除控制器
+            [LXCNoteCenter postNotificationName:LXCDistrictDidChangeNote object:nil userInfo:@{LXCDistrictDidChangeNoteModelKey:self.city.districts[indexPath.row]}];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
     } else {
-        LxcLog(@"%@",self.city.districts[self.selectedRow].subdistricts[indexPath.row]);
+        //选中二级菜单
+        //发送通知,移除控制器
+        [LXCNoteCenter postNotificationName:LXCDistrictDidChangeNote object:nil userInfo:@{LXCDistrictDidChangeNoteModelKey:self.city.districts[self.selectedRow],LXCDistrictDidChangeNoteSubtitleKey:self.city.districts[self.selectedRow].subdistricts[indexPath.row]}];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }
+    
+    
 }
 
 
