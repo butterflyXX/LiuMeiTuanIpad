@@ -103,6 +103,8 @@
         self.refunableBtn.selected = ([result[@"deals"][0][@"restrictions"][@"is_refundable"] boolValue]) ? YES : NO;
         self.outDateBtn.selected = self.refunableBtn.selected;
     }
+    
+    
 }
 
 
@@ -114,10 +116,35 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self.loadingView stopAnimating];
+    
+    NSMutableString *jsStr = [NSMutableString new];
+    
+    [jsStr appendString:@"var header = document.getElementsByTagName('header')[0];"];
+    
+    [jsStr appendString:@"header.parentNode.removeChild(header);"];
+    
+    [jsStr appendString:@"var div = document.getElementsByTagName('div')[0];"];
+    
+    [jsStr appendString:@"div.parentNode.removeChild(div);"];
+    
+    [jsStr appendString:@"var div = document.getElementsByTagName('a')[0];"];
+    
+    [jsStr appendString:@"div.parentNode.removeChild(div);"];
+    
+    [jsStr appendString:@"var div = document.getElementsByTagName('footer')[0];"];
+    
+    [jsStr appendString:@"div.parentNode.removeChild(div);"];
+    
+    //执行js代码
+    [webView stringByEvaluatingJavaScriptFromString:jsStr];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     LxcLog(@"web加载失败");
+}
+
+-(UIInterfaceOrientationMask)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskLandscape;
 }
 
 

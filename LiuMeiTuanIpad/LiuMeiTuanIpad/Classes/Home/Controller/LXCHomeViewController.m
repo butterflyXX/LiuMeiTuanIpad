@@ -27,8 +27,9 @@
 @property(nonatomic,copy)NSString *currendistrict;
 @property(nonatomic,copy)NSString *currencategory;
 @property(nonatomic,strong)NSNumber *currenSort;
-@property(nonatomic,strong)NSArray *dataArr;
+@property(nonatomic,strong)NSMutableArray *dataArr;
 @property(nonatomic,weak)AwesomeMenu *awesomeMenu;
+@property(nonatomic,assign)int currenPage;
 
 @end
 
@@ -65,12 +66,47 @@ static NSString * const reuseIdentifier = @"dealCell";
     
     [self setAwesomeMenu];
     
+    [self setupRefresh];
+    
+    
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)loadNewData {
+    
+    self.currenPage = 1;
+    [self requestData];
+    
+}
+
+-(void)loadMoreData {
+    self.currenPage++;
+    [self requestData];
+}
+
+-(void)setupRefresh {
+    
+    self.collectionView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+       //下拉刷新触发的事件
+        [self loadNewData];
+    }];
+    
+    self.collectionView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        [self loadMoreData];
+    }];
+    
+    //隐藏上拉加载
+    self.collectionView.mj_footer.hidden = YES;
+    
+    __weak typeof(self) weakSelf = self;
+    [self.collectionView.mj_header setEndRefreshingCompletionBlock:^{
+        
+        weakSelf.collectionView.mj_footer.hidden = NO;
+    }];
+    
+    //手动刷新界面
+    [self.collectionView.mj_header beginRefreshing];
+    
 }
 
 -(void)setAwesomeMenu {
@@ -113,6 +149,10 @@ static NSString * const reuseIdentifier = @"dealCell";
     [self.view addSubview:awesomeMenu];
     
     self.awesomeMenu = awesomeMenu;
+}
+
+- (void)awesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx {
+    
 }
 
 //开始awesomeMenu
@@ -286,7 +326,7 @@ static NSString * const reuseIdentifier = @"dealCell";
     //记录当前城市
     self.currenCity = noti.userInfo[LXCCityDidChangeNoteCityName];
     
-    [self requestData];
+    [self.collectionView.mj_header beginRefreshing];
     
 }
 
@@ -317,7 +357,7 @@ static NSString * const reuseIdentifier = @"dealCell";
         self.currencategory = subTitle;
     }
     
-    [self requestData];
+    [self.collectionView.mj_header beginRefreshing];
 }
 
 -(void)changeDistrict:(NSNotification *)noti {
@@ -347,7 +387,7 @@ static NSString * const reuseIdentifier = @"dealCell";
         self.currendistrict = subTitle;
     }
     
-    [self requestData];
+    [self.collectionView.mj_header beginRefreshing];
     
 }
 
@@ -362,7 +402,7 @@ static NSString * const reuseIdentifier = @"dealCell";
     //记录当前排序方式
     self.currenSort = sortModel.value;
     
-    [self requestData];
+    [self.collectionView.mj_header beginRefreshing];
     
 }
 
@@ -405,8 +445,7 @@ static NSString * const reuseIdentifier = @"dealCell";
     NSString *cityGroupPath = [[NSBundle mainBundle] pathForResource:@"cityGroups.plist" ofType:nil];
     NSArray *dictArr = [NSArray arrayWithContentsOfFile:cityGroupPath];
     _citygroupDataArr = [NSArray yy_modelArrayWithClass:[LXCCityGroupsModel class] json:dictArr];
-    
-    [self requestData];
+
     
 }
 
@@ -462,6 +501,12 @@ static NSString * const reuseIdentifier = @"dealCell";
     //设置排序
     [param setValue:self.currenSort forKey:@"sort"];
     
+    //设置每次返回的个数
+    [param setValue:@3 forKey:@"limit"];
+    
+    //设置页数
+    [param setValue:@(self.currenPage) forKey:@"page"];
+    
     //发送请求
     [[DPAPI new] requestWithURL:@"v1/deal/find_deals" params:param delegate:self];
     
@@ -471,6 +516,9 @@ static NSString * const reuseIdentifier = @"dealCell";
 //获取收失败
 - (void)request:(DPRequest *)request didFailWithError:(NSError *)error {
     LxcLog(@"获取数据失败");
+    self.currenPage--;
+    [self.collectionView.mj_footer endRefreshing];
+    [self.collectionView.mj_header endRefreshing];
 }
 
 //获取数据成功
@@ -478,8 +526,23 @@ static NSString * const reuseIdentifier = @"dealCell";
     
     //返回的是json数据
     NSArray *dictArr = result[@"deals"];
-    //字典转模型
-    self.dataArr = [NSArray yy_modelArrayWithClass:[LXCDealModel class] json:dictArr];
+    
+    //判断是上啦还是下拉
+    if (self.collectionView.mj_header.isRefreshing) {
+        //下拉
+        //字典转模型
+        self.dataArr = [NSMutableArray arrayWithArray:[NSArray yy_modelArrayWithClass:[LXCDealModel class] json:dictArr]];
+        
+        //停止下拉刷新
+        [self.collectionView.mj_header endRefreshing];
+        
+    } else {
+        [self.dataArr addObjectsFromArray:[NSArray yy_modelArrayWithClass:[LXCDealModel class] json:dictArr]];
+        
+        //停止上啦加载
+        [self.collectionView.mj_footer endRefreshing];
+    }
+
     //刷新界面
     [self.collectionView reloadData];
 }
